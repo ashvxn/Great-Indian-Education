@@ -1132,9 +1132,14 @@ def verify2():
     mode      = request.args.get('hub.mode')
     token     = request.args.get('hub.verify_token')
     challenge = request.args.get('hub.challenge')
-    if mode == 'subscribe' and token == VERIFY_TOKEN_2:
+    expected_token = os.getenv("VERIFY_TOKEN_2", "").strip()
+
+
+    if mode == 'subscribe' and token == expected_token:
+
         print("✅ Bot2 Webhook Verified!")
         return challenge, 200
+    print(f"❌ Verification failed. Received: '{token}', Expected: '{expected_token}'")
     return "Verification failed", 403
 
 
