@@ -38,7 +38,7 @@ ACCESS_TOKEN_2    = os.getenv('ACCESS_TOKEN_2')
 PHONE_NUMBER_ID_2 = os.getenv('PHONE_NUMBER_ID_2')
 VERIFY_TOKEN_2    = os.getenv('VERIFY_TOKEN_2')
 
-COMPANY_ID_2 = 4        # ← Change this to the correct COMPANY_ID for IMTTC
+COMPANY_ID_2 = 7        # ← Change this to the correct COMPANY_ID for IMTTC
 
 # ===========================================================================
 # SESSION STORES (kept separate per bot)
